@@ -1,0 +1,655 @@
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:768px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        /* make it look decent enough */
+        background: #c3b7aa;
+        color: #cdcdcd;
+        font-family: "Avenir Next", "Avenir", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        color: #232323;
+
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: tomato;
+    }
+
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 10%;
+        left: 5%;
+
+        z-index: 1;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
+    }
+
+    /*
+ * Just a quick hamburger
+ */
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #000000;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #000000;
+    }
+
+    /*
+ * But let's hide the middle one.
+ */
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    #menu {
+        position: absolute;
+        width: 300px;
+        margin: 0px 0 0 -50px;
+        padding: 50px;
+        padding-top: 5px;
+
+        background: #cdcdcd;
+        list-style-type: none;
+        /* to stop flickering of text in safari */
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*
+ * And let's slide it in from the left
+ */
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+    body {
+        background-image: url("images/forside1.png");
+    }
+    /* css til logo */
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+
+    }
+
+    /* css til header */
+    .header {
+        padding-bottom: 10px;
+        background-color:#fff7e6;
+        box-shadow: 0px 3px 3px;
+        color: #000000;
+    }
+
+    /* css til forside/hjem */
+    .forsideh1 {
+        text-align: center;
+        background-color: dimgrey;
+        margin: 0px;
+        box-shadow: 0px 3px 3px #000000;
+        opacity: 0.4;
+        color: white;
+
+    }
+    .banner {
+        display: none;
+    }
+
+    /* css til kontakt side */
+    .kontakt {
+        margin: 10px;
+        color: #000000;
+        text-align: center;
+        line-height: 0.5;
+        border: 3px #000000 solid;
+        background-color: #fff7e6;
+        font-weight: bold;
+    }
+
+    .kontakth1 {
+        color: #000000;
+        text-align: center;
+        background-color: #fff7e6;
+        font-size: 0.8em;
+        margin: 0px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        box-shadow: 0px 3px 3px 0px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+
+    .kontakth2 {
+        font-size: 1.3em;
+        font-weight: bolder;
+    }
+    .kontakt p {
+        font-weight: bolder;
+    }
+    .adresse {
+        line-height: 1.4;
+    }
+
+    /*css til priser */
+    .priser {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .priserh1 {
+        color: #000000;
+        background-color: #fff7e6;
+        font-size: 0.8em;
+        margin: 0px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        box-shadow: 0px 3px 3px 0px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
+
+    .prismenu {
+        font-size: 0.7em;
+    }
+    .herre {
+        background-color: #1e1d1d;
+        padding: 20px;
+        margin: 0px;
+        color: #ffffff;
+    }
+    .dame {
+        background-color: #2b2929;
+        padding: 20px;
+        margin: 0px;
+        color: #ffffff;
+    }
+
+    .prisliste {
+        background-color: #000000;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .prisliste h2 {
+        color: #c37255;
+    }
+    .prisliste p {
+        color: #ffffff;
+        font-size: 0.8em;
+        margin: 0px;
+        padding: 8px;
+    }
+
+    .p1 {
+        background-color: #1e1d1d;
+    }
+    .p2 {
+        background-color: #0c0c0c;
+    }
+    .prisliste h3 {
+        color: #ffffff;
+        margin-top: 16px;
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+    /* css til om os siden*/
+    .omos {
+        color: #000000;
+        text-align: center;
+    }
+    .omos h1 {
+        background-color: #fff7e6;
+        font-size: 0.8em;
+        margin: 0px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        box-shadow: 0px 3px 3px 0px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+
+    }
+    .omos p {
+        font-weight: bold;
+        margin: 5px 5px 20px 5px;
+        font-size: 0.9em;
+        padding: 5px;
+    }
+    .omos img {
+        width: 100px;
+    }
+    /*css til bestil tid*/
+    .bestiltid {
+        color: #000000;
+        text-align: center;
+    }
+    .bestiltid h1 {
+        font-size: 1.8em;
+    }
+    .bestiltidh2 {
+        color: #000000;
+        text-align: center;
+        background-color: ##fff7e6;
+        font-size: 0.8em;
+        margin: 0px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        box-shadow: 0px 3px 3px 0px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        max-width: 150px;
+
+    }
+    .bestiltid img {
+        width: 100px;
+    }
+    .velgtid {
+        color: #000000;
+        text-align: center;
+    }
+    .velgtid h1 {
+        font-size: 1.8em;
+    }
+    .velgtid img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 225px;
+    }
+    .velgtid h3 {
+        background-color: #4d4d4d;
+        color: #ffffff;
+        width: 40%;
+        margin-left: auto;
+        margin-right: 5%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: 2px solid #000000;
+        float: right;
+        max-width: 200px;
+    }
+    .bekraeft {
+        text-align: center;
+        color: #000000;
+    }
+    .bekraeft h1 {
+        font-size: 1.8em;
+    }
+
+    .mailbox {
+        font-weight: bold;
+    }
+    .input1 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .input2 {
+        margin-top: 5px;
+    }
+    .submit {
+        background-color: #4d4d4d;
+        color: #ffffff;
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        border: 2px solid;
+        font-weight: bold;
+        padding-top: 2px;
+
+    }
+    .bekraeftet {
+        text-align: center;
+        color: #000000;
+        font-size: 1.3em;
+        width: 50%;
+        margin-top: 60px;
+        border: 3px solid #000000;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .header {
+        background-color: #fff7e6;
+        margin: -10px;
+    }
+    .checkbox {
+        display: none;
+    }
+    .forsideh1 {
+        display: none;
+    }
+    .logo {
+        width: 250px;
+    }
+    #menu {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        margin-right: 12px;
+    }
+    li {
+        float: right;
+        display: inline;
+        background-color: #d0cac0;
+        margin-left: 10px;
+    }
+    li a {
+        color: #000000;
+        display: inline-block;
+        text-align: center;
+        padding: 5px 18px;
+        text-decoration: none;
+        text-align: center;
+    }
+    li a:hover {
+        color: #ffffff;
+        background-color: #111;
+    }
+    .active {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    .banner {
+        width: 102%;
+        margin-top: 10px;
+        margin-left: -10px;
+    }
+    /* css til om os siden*/
+    .omos {
+        color: #000000;
+        text-align: center;
+    }
+    .omos h1 {
+display:none;
+
+    }
+    .omos p {
+        font-weight: bold;
+        margin: 5px 5px 20px 5px;
+        font-size: 0.9em;
+        padding: 5px;
+    }
+    .omos img {
+        margin:50px 0 0 0;
+        width: 150px;
+    }
+    /*css til priser */
+    .priser {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .priserh1 {
+        display: none;
+    }
+
+    .prismenu {
+        font-size: 0.7em;
+    }
+    .prismenu a {
+        text-decoration: none;
+    }
+    .priser a {
+        text-decoration: none;
+    }
+    .herre {
+        background-color: #1e1d1d;
+        padding: 20px;
+        margin: 50px 0 0 0px;
+        margin-left: 25%;
+        margin-right: 25%;
+        color: #ffffff;
+    }
+    .dame {
+        background-color: #2b2929;
+        padding: 20px;
+        margin: 0px;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 30px;
+        color: #ffffff;
+    }
+
+    .prisliste {
+        background-color: #000000;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .prisliste h2 {
+        color: #c37255;
+    }
+    .prisliste p {
+        color: #ffffff;
+        font-size: 0.8em;
+        margin: 0px;
+        padding: 8px;
+    }
+
+    .p1 {
+        background-color: #1e1d1d;
+    }
+    .p2 {
+        background-color: #0c0c0c;
+    }
+    .prisliste h3 {
+        color: #ffffff;
+        margin-top: 16px;
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+    /* css til kontakt side */
+    .kontakt {
+        margin: 20px 0px 0px 10px;
+        color: #000000;
+        text-align: center;
+        line-height: 0.5;
+        border: 3px #000000 solid;
+        background-color: #cdc7c7;
+        font-weight: bold;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .kontakth1 {
+        display: none;
+    }
+
+    .kontakth2 {
+        font-size: 1.3em;
+        font-weight: bolder;
+    }
+    .kontakt p {
+        font-weight: bolder;
+    }
+    .adresse {
+        line-height: 1.4;
+    }
+
+
+    /*css til bestil tid*/
+    .bestiltid {
+        color: #000000;
+        text-align: center;
+    }
+    .bestiltid h1 {
+        font-size: 1.8em;
+    }
+    .bestiltidh2 {
+        display: none;
+
+    }
+    .bestiltid img {
+        width: 150px;
+    }
+    .bestiltid a{
+        text-decoration: none;
+    }
+    .velgtid {
+        color: #000000;
+        text-align: center;
+    }
+    .velgtid h1 {
+        font-size: 1.8em;
+    }
+    .velgtid img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+    }
+    .velgtid h3 {
+        background-color: #4d4d4d;
+        color: #ffffff;
+        width: 40%;
+        margin-left: auto;
+        margin-right: 20%;
+        margin-top: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: 2px solid #000000;
+        float: right;
+        max-width: 200px;
+    }
+    .bekraeft {
+        text-align: center;
+        color: #000000;
+    }
+    .bekraeft h1 {
+        font-size: 1.8em;
+    }
+
+    .mailbox {
+        font-weight: bold;
+    }
+    .input1 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .input2 {
+        margin-top: 5px;
+    }
+    .submit {
+        background-color: #4d4d4d;
+        color: #ffffff;
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        border: 2px solid;
+        font-weight: bold;
+        padding-top: 2px;
+
+    }
+    .bekraeftet {
+        text-align: center;
+        color: #000000;
+        font-size: 1.3em;
+        width: 50%;
+        margin-top: 60px;
+        border: 3px solid #000000;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bekraeft a {
+        text-decoration: none;
+    }
+    body{
+        background-color:#c3b7aa;
+        background-repeat:no-repeat;
+        background-size:100%;
+    }
+}
