@@ -13,6 +13,10 @@ body {
 
 header {
     background-color: #68070C;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
 }
 
 #wrapper {
@@ -47,6 +51,7 @@ h2 {
 
 
 /*forside styling*/
+
 .forsidebillede {
     display: block;
     margin-left: auto;
@@ -69,6 +74,7 @@ h2 {
 
 
 /*case info styling*/
+
 .info p {
     font-weight: bold;
 }
@@ -80,6 +86,7 @@ h2 {
 
 
 /*kontakt styling*/
+
 .kontakt {
     text-align: center;
 }
@@ -90,6 +97,7 @@ h2 {
 
 
 /*footer styling*/
+
 footer {
     background-color: #68070C;
     text-align: center;
@@ -124,12 +132,12 @@ footer img {
         transition: border-bottom 1s ease-in-out;
         -webkit-transition: border-bottom 1s ease-in-out;
     }
-    
+
     .burger::-moz-focus-inner {
         border: 0;
         padding: 0;
     }
-    
+
     .burger:before {
         content: "";
         display: block;
@@ -141,7 +149,7 @@ footer img {
         transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
         -webkit-transition: -webkit-transform 0.5s ease-in-out;
     }
-    
+
     .burger:after {
         content: "";
         display: block;
@@ -163,7 +171,7 @@ footer img {
         transition: border-bottom 0.8s ease-in-out;
         -webkit-transition: border-bottom 0.8s ease-in-out;
     }
-    
+
     .burger-check:checked ~ .burger:before {
         transform: rotate(-405deg) translateY(1px) translateX(-3px);
         -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
@@ -172,7 +180,7 @@ footer img {
         transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
         -webkit-transition: -webkit-transform 0.5s ease-in-out;
     }
-    
+
     .burger-check:checked ~ .burger:after {
         transform: rotate(405deg) translateY(-4px) translateX(-5px);
         -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
@@ -201,7 +209,7 @@ footer img {
     }
 
     .menu {
-        margin: 25px 0 0 0;
+        margin: 25px 0 0 28px;
         padding: 0;
         font-size: 30px;
         text-align: center;
@@ -212,11 +220,11 @@ footer img {
         font-size: 20px;
         padding: 5px 0;
     }
-    
+
     .menu li a {
         text-decoration: none;
     }
-    
+
     .menu li a:hover {
         text-decoration: underline;
     }
@@ -224,7 +232,7 @@ footer img {
     .weblogo {
         display: none;
     }
-    
+
     .mobilelogo {
         position: fixed;
         width: 60px;
@@ -232,10 +240,6 @@ footer img {
 
     header {
         padding: 10px 10px 20px 10px;
-        width: 100%;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
     }
 
     .indhold {
@@ -245,27 +249,27 @@ footer img {
     .ommigimgweb {
         display: none;
     }
-    
+
     .ommigtekst {
         display: none;
     }
     .tekst {
         padding-left: 10px;
     }
-    
+
     .kontakt img {
         width: 150px;
     }
-    
-    .ommigimg{
-        width:5px;
+
+    .ommigimg {
+        width: 5px;
     }
 }
 
 /*responsiv til alle mobiler*/
 
 @media screen and (max-width:768px) {
-    
+
     .forsidebillede {
         width: 90%;
 
@@ -277,17 +281,17 @@ footer img {
 
     .ommigimg {
         width: 120px;
-        margin-left:5%;
+        margin-left: 5%;
     }
-    
+
     .cases {
         width: 90%;
     }
-        .cases img{
-        display:none;
+    .cases img {
+        display: none;
     }
-    .tekst{
-        width:90%;
+    .tekst {
+        width: 90%;
     }
 
 }
@@ -310,7 +314,7 @@ footer img {
         margin-right: 20%;
         margin-left: 20%;
     }
-    
+
     .tekst {
         width: 85%;
     }
@@ -319,55 +323,55 @@ footer img {
 /*responsiv til tablet*/
 
 @media screen and (min-width:769px) and (max-width:1199px) {
-   
+
     .forsidebillede {
         width: 60%;
     }
-    
+
     .treord {
         font-size: 1.5em;
     }
-    
+
     .ommigimg {
-        float:right;
+        float: right;
         width: 150px;
-        margin-right:10%;
+        margin-right: 10%;
     }
-    
+
     .kontakt p {
         margin-right: 27%;
         margin-left: 27%;
     }
-    
-    
+
+
     /*styling til case sider*/
-        .tekst p {
+    .tekst p {
         width: 50%;
     }
-    
-        .cases img{
-        float:right;
-        border-style:solid;
-        border-color:#68070C;
-        border-width:3px;
-        margin-right:5%;
+
+    .cases img {
+        float: right;
+        border-style: solid;
+        border-color: #68070C;
+        border-width: 3px;
+        margin-right: 5%;
     }
-    
-     
-    .caseimg1{
-        width:220px;
-        margin-top:20px;
+
+
+    .caseimg1 {
+        width: 220px;
+        margin-top: 20px;
     }
-    
-    .caseimg2{
-        width:300px;
-        background-color:#ffffff;
+
+    .caseimg2 {
+        width: 300px;
+        background-color: #ffffff;
     }
-        .caseimg3{
-        width:250px;
+    .caseimg3 {
+        width: 250px;
     }
-        .caseimg4{
-        width:160px;
+    .caseimg4 {
+        width: 160px;
     }
 }
 
@@ -376,12 +380,7 @@ footer img {
 
 @media screen and (min-width:1200px) {
 
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-    
+
     .mobilelogo {
         display: none;
     }
@@ -391,11 +390,11 @@ footer img {
         width: 250px;
         float: left;
     }
-    
+
     .indhold {
         margin-top: 100px;
     }
-    
+
     .tekst {
         margin: 0 15%;
     }
@@ -407,8 +406,8 @@ footer img {
     .burger-check {
         display: none;
     }
-    
-    
+
+
     /*menu til web*/
     .menu {
         float: right;
@@ -417,7 +416,7 @@ footer img {
         padding: 0px;
         overflow: hidden;
     }
-    
+
     .menu li {
         float: left;
         display: inline;
@@ -428,7 +427,7 @@ footer img {
         border-bottom-right-radius: 5px;
         overflow: hidden;
     }
-    
+
     .menu li a {
         color: #ffffff;
         display: inline-block;
@@ -436,39 +435,39 @@ footer img {
         padding: 5px 18px;
         text-decoration: none;
     }
-    
+
     li a:hover {
         color: #ffffff;
         background-color: #191919;
     }
-    
+
     .active {
         background-color: #191919;
         color: #ffffff;
     }
-    
+
     .menu li.ommigmenu {
         display: none;
     }
-    
-    
-/*forside styling*/
-        .forsidebillede {
+
+
+    /*forside styling*/
+    .forsidebillede {
         width: 55%;
     }
 
-        .navn {
+    .navn {
         font-weight: bold;
         text-align: center;
         line-height: 0;
         padding-bottom: 20px;
     }
-    
+
     .ommigtekst {
         width: 50%;
         margin-top: 60px;
     }
-    
+
     .ommigimgweb {
         width: 200px;
         float: right;
@@ -477,59 +476,59 @@ footer img {
         border-color: #68070C;
         margin-top: 50px;
     }
-    
+
     .ommigtekst h1 {
         text-align: center;
     }
-    
-    
+
+
     /*styling til billeder i cases*/
     .cases p {
         width: 50%;
     }
-    
-    .cases img{
-        float:right;
-        border-style:solid;
-        border-color:#68070C;
-        border-width:3px;
+
+    .cases img {
+        float: right;
+        border-style: solid;
+        border-color: #68070C;
+        border-width: 3px;
     }
-    
-    .caseimg1{
-        width:270px;
+
+    .caseimg1 {
+        width: 270px;
     }
-    
-    
-    .caseimg2{
-        width:400px;
-        background-color:#ffffff;
+
+
+    .caseimg2 {
+        width: 400px;
+        background-color: #ffffff;
     }
-    
-    .caseimg3{
-        width:300px;
+
+    .caseimg3 {
+        width: 300px;
     }
-    
-    .caseimg4{
-        width:200px;
+
+    .caseimg4 {
+        width: 200px;
     }
-    
-    
+
+
     /*kontakt side styling*/
     .kontakt {
-        
+
         padding-top: 10px;
     }
-    
+
     .kontakt p {
         margin-left: 28%;
         margin-right: 28%;
     }
-    
+
     .kontakt img {
         width: 200px;
         border-style: solid;
         border-width: 5px;
         border-color: #68070C;
     }
-    
+
 }
