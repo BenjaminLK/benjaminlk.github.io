@@ -1,0 +1,88 @@
+/**
+ * file: style.css
+ * purpose: effects ...
+ **/
+body {
+    animation-name:baggrund;
+    animation-duration:30s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes baggrund{
+    5%{background-color:aqua;}
+    10%{background-color:blueviolet;}
+    15%{background-color:cadetblue;}
+    20%{background-color: chartreuse;}
+    25%{background-color: cornflowerblue;}
+    30%{background-color:firebrick;}
+    35%{background-color:aqua;}
+    40%{background-color:blueviolet;}
+    45%{background-color:cadetblue;}
+    50%{background-color: chartreuse;}
+    55%{background-color: cornflowerblue;}
+    60%{background-color:firebrick;}
+    65%{background-color:aqua;}
+    70%{background-color:blueviolet;}
+    75%{background-color:cadetblue;}
+    80%{background-color: chartreuse;}
+    85%{background-color: cornflowerblue;}
+    90%{background-color:firebrick;}
+    95%{background-color:aqua;}
+    100%{background-color:blueviolet;}
+}
+article {
+	margin:0 30%;
+    text-align:center;
+}
+
+h1 {
+
+}
+
+#overskrift1{
+    animation-name:farver;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
+}
+@keyframes farver{
+    25%{
+        background-color:aqua;
+    }
+    50%{
+        background-color:chartreuse;
+    }
+    75%{
+        background-color:cornflowerblue;
+    }
+    100%{
+        background-color:darkgoldenrod;
+    }
+}
+#first {
+	
+}
+
+.red{
+    font-family: lobster;
+}
+
+.blue{
+    background:#0000FF;
+    font-family:gloria hallelujah;
+}
+
+#billedetekst{
+    animation-name:lille;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes lille{
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(360deg)
+    }
+
+}
