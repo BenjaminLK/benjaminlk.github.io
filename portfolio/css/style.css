@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #515f67;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    opacity: 0.85;
+    margin-left: -8px;
+}
+
+/*menu til web*/
+
+.menu {
+    float: right;
+    list-style-type: none;
+    margin: 40px 10% 0 0;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+
+.menu li a {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #4bcaff;
+}
+
+li a {
+    color: white;
+}
+
+.active {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4bcaff;
+}
+
+.active a {
+    color: #4bcaff;
+}
+
+/*weblogo*/
+
+#weblogo {
+    padding: 15px 0px;
+    width: 125px;
+    float: left;
+    margin-left: 10%;
+}
+
+/*forsidebillede til web*/
+
+.bgimage {
+    width: 100%;
+}
+
+/*tekst på forsidebillede*/
+
+.container {
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 1.4em;
+    line-height: 0.8em;
+}
+
+.text-block {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(54, 25, 25, .50);
+    color: white;
+    padding: 0 20px 0 20px;
+}
+
+/*footer*/
+footer {
+    background-color: #515f67;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    position:absolute;
+    margin-left:-8px;
+}
+
+.icons{
+    margin: 0 10px 0 10px;
+}
